@@ -29,5 +29,11 @@
   },
   "devDependencies": {
     "tw-animate-css": "^1.2.8"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.40.1"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node"
   }
 }
