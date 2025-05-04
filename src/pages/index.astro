@@ -1,25 +1,204 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+// index.astro - Landing page principal
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles, Image as ImageIcon, Check, Clock, DollarSign, TrendingUp, Upload } from "lucide-react";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// Obtener el año actual para el footer
+const currentYear = new Date().getFullYear();
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<Layout title="Tiendia.app | Fotos de Producto con IA">
+  <div class="min-h-screen bg-gradient-to-b from-background to-blue-50/50 dark:to-slate-900/50 flex flex-col items-center text-foreground px-4">
+    
+    <!-- Hero Section -->
+    <section class="container pt-20 pb-16 md:pt-28 md:pb-24 text-center space-y-6 max-w-4xl">
+      <Badge variant="outline" className="text-sm px-4 py-1 border-primary/50 bg-primary/10 text-primary font-medium shadow-sm">
+        <Sparkles className="h-3 w-3 mr-2" /> Fotos de Producto con IA
+      </Badge>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight md:leading-snug">
+        Transforma tus Fotos <span class="bg-gradient-to-r from-blue-500 to-cyan-400 dark:from-blue-400 dark:to-cyan-300 bg-clip-text text-transparent">en Imagenes Profesionales</span> por tan solo $50
+      </h1>
+
+      <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        Sube la foto de tu producto y deja que nuestra IA genere imágenes profesionales de alta calidad en segundos. ¡Sin necesidad de estudio ni fotógrafo!
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+         <a href="https://my.tiendia.app/home">
+          <Button 
+         size="lg"
+          className="gap-2 text-lg shadow-lg hover:shadow-primary/30 transition-shadow duration-300"
+          >
+           <Upload className="h-5 w-5" />
+           Comenzar por $50
+         </Button>
+         </a>
+      </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="container py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        De Esto... <span class="text-muted-foreground/80">a Esto</span> ✨
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+        <!-- Antes -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-xl font-semibold mb-4 text-muted-foreground">Tu Foto Original</h3>
+          <Card className="overflow-hidden shadow-lg w-full">
+            <img
+              src="/placeholder-antes.jpeg" 
+              alt="Foto de producto antes de la IA"
+              class="aspect-square object-cover w-full transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+          </Card>
+        </div>
+
+        <!-- Después -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-xl font-semibold mb-4 text-primary">Generada con tiendia.app</h3>
+          <Card className="overflow-hidden shadow-xl border-2 border-primary/50 w-full">
+             <img
+            src="/placeholder-despues.png" 
+            alt="Foto de producto generada por IA"
+            class="aspect-square object-cover w-full object-top transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+          </Card>
+        </div>
+      </div>
+      <p class="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
+        Nuestra IA analiza tu producto y lo presenta en el mejor escenario posible, con iluminación y estilo profesional.
+      </p>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section class="container py-16 md:py-24 bg-muted/30 dark:bg-slate-800/20 rounded-2xl my-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Ventajas que Impulsarán tu Tienda
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Feature Cards -->
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <ImageIcon className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Calidad de Estudio</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Obtén imágenes profesionales sin costosos equipos ni fotógrafos.</p>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <Clock className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Generación Instantánea</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Transforma tus fotos en segundos, no días. Acelera tus lanzamientos.</p>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <DollarSign className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Ahorro Significativo</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Reduce drásticamente los costos asociados a la fotografía de producto tradicional.</p>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <TrendingUp className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Atrae Más Clientes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Imágenes atractivas aumentan la confianza y las conversiones en tu tienda.</p>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <Upload className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Increíblemente Fácil</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Solo necesitas subir tu foto. Nuestra IA se encarga de la magia.</p>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="flex flex-row items-center gap-4 pb-2">
+            <div class="p-2 bg-primary/10 rounded-md">
+              <Check className="h-6 w-6 text-primary" />
+            </div>
+            <CardTitle className="text-lg font-semibold">Resultados Consistentes</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-sm text-muted-foreground">Mantén un estilo visual profesional y coherente en todos tus productos.</p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container py-16 md:py-24 text-center space-y-6 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        ¿Listo para Elevar tus Productos?
+      </h2>
+      <p class="text-lg md:text-xl text-muted-foreground">
+        Regístrate y para generar tus primeras imágenes hoy mismo.
+      </p>
+      <a href="https://my.tiendia.app/home">
+      <Button 
+      size="lg" className="gap-2 text-lg shadow-lg hover:shadow-primary/30 transition-shadow duration-300">
+          <Sparkles className="h-5 w-5" />
+          Probar Ahora
+      </Button>
+    </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container py-8 text-center text-sm text-muted-foreground mt-12 border-t border-border/20">
+      © {currentYear} tiendia.app - Imágenes IA para tu Éxito. Todos los derechos reservados.
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  // Client-side script (if needed)
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Landing page loaded!');
+  });
+</script>
+
+<!-- Client-side script for interactive elements -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add hover effects or any client-side functionality here
+    const cards = document.querySelectorAll('.hover\\:-translate-y-1');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('-translate-y-1');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('-translate-y-1');
+      });
+    });
+  });
+</script>
