@@ -1,0 +1,85 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: URL;
+}
+
+const {
+  title = "Tiendia - AI-Powered Fashion Photography for Online Stores",
+  description = "Transform your clothing photos into professional model shots with AI. Perfect for online fashion stores looking to showcase their products professionally.",
+  image = "https://tiendia.app/og-image.jpg",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
+} = Astro.props;
+
+const webAppJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tiendia",
+  "url": "https://tiendia.app",
+  "description": description,
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta usar Tiendia.app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tiendia.app solo cobra 50 pesos por generar cada imagen profesional con modelo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo puedo cargar pesos en Tiendia.app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Desde la sección de Créditos podés ingresar el monto que deseás cargar y serás redirigido automáticamente a Mercado Pago para completar el pago de forma segura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si hubo un error al generar la imagen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No se te cobrará por esa imagen. Además, podés contactarnos por WhatsApp o correo electrónico para resolver cualquier inconveniente."
+      }
+    }
+  ]
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(webAppJsonLd)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} /> 

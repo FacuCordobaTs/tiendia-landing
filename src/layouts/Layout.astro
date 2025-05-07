@@ -1,5 +1,7 @@
 ---
 // src/layouts/Layout.astro
+import SEO from '@/components/SEO.astro';
+
 interface Props {
   title: string;
   description?: string;
@@ -23,23 +25,12 @@ import '@/styles/global.css';
     <link rel="icon" type="image/svg+xml" href="/logoblanco.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO -->
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.png" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/og-image.png" />
+    <!-- SEO Component -->
+    <SEO 
+      title={title}
+      description={description}
+      image="/og-image.png"
+    />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
