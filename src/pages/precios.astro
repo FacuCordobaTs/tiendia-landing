@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Precios - Tiendia.app">
+  <Header />
+  
+  <main class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          Precios Simples y Transparentes
+        </h1>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+          Solo pagás por lo que usás. Sin suscripciones ni costos ocultos.
+        </p>
+      </div>
+
+      <!-- Pricing Card -->
+      <div class="max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+        <div class="px-6 py-8">
+          <div class="text-center">
+            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+              Plan Básico
+            </h2>
+            <p class="mt-4 text-gray-600 dark:text-gray-400">
+              Perfecto para tiendas que recién comienzan
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <div class="flex items-center justify-center">
+              <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$50</span>
+              <span class="ml-2 text-xl font-medium text-gray-600 dark:text-gray-400">/imagen</span>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <ul class="space-y-4">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en minutos</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="ml-3 text-gray-600 dark:text-gray-400">Soporte prioritario</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <a
+              href="https://my.tiendia.app/home"
+              class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
+            >
+              Comenzar Ahora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
+          Preguntas Frecuentes
+        </h2>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+              ¿Cómo funciona el pago?
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              Podés cargar créditos a tu cuenta usando Mercado Pago. Cada imagen generada cuesta 50 pesos y se descuenta automáticamente de tu saldo.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+            <h3 class="text-lg font-medium text-gray-900 dark:text-white">
+              ¿Qué pasa si no estoy satisfecho con el resultado?
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+              Si no estás satisfecho con la imagen generada, no se te cobrará. Podés contactarnos y te ayudaremos a obtener el resultado que buscás.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout> 

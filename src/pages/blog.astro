@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Blog - Tiendia.app">
+  <Header />
+  
+  <main class="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          Blog
+        </h1>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+          Tips y novedades sobre fotografía de productos
+        </p>
+      </div>
+
+      <!-- Featured Article -->
+      <article class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9">
+          <img
+            src="https://placehold.co/1200x675/1a1a1a/ffffff?text=AI+Fashion+Photography"
+            alt="AI Fashion Photography"
+            class="object-cover"
+          />
+        </div>
+        
+        <div class="p-8">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+            Cómo generar imágenes profesionales con modelos para tus productos
+          </h2>
+          
+          <div class="mt-4 flex items-center text-gray-600 dark:text-gray-400">
+            <time datetime="2024-03-20">20 de Marzo, 2024</time>
+            <span class="mx-2">•</span>
+            <span>5 min de lectura</span>
+          </div>
+
+          <div class="mt-8 prose dark:prose-invert max-w-none">
+            <p class="lead">
+              En el mundo del comercio electrónico, la presentación visual de tus productos es crucial para el éxito. Las imágenes profesionales con modelos pueden aumentar significativamente las tasas de conversión y la confianza del cliente. Sin embargo, organizar sesiones fotográficas tradicionales puede ser costoso y consumir mucho tiempo. Aquí es donde entra Tiendia.app.
+            </p>
+
+            <h3>¿Qué es Tiendia.app?</h3>
+            <p>
+              Tiendia.app es una plataforma revolucionaria que utiliza inteligencia artificial para transformar tus fotos de productos en imágenes profesionales con modelos. Nuestra tecnología avanzada permite que cualquier tienda de ropa pueda tener imágenes de alta calidad sin la necesidad de costosas sesiones fotográficas.
+            </p>
+
+            <h3>¿Cómo funciona?</h3>
+            <p>
+              El proceso es sorprendentemente simple:
+            </p>
+            <ol>
+              <li>Subí una foto clara de tu producto</li>
+              <li>Nuestra IA analiza el producto y genera una imagen con un modelo</li>
+              <li>Recibí tu imagen profesional en minutos</li>
+            </ol>
+
+            <h3>Beneficios para tu tienda online</h3>
+            <ul>
+              <li>
+                <strong>Mayor tasa de conversión:</strong> Las imágenes con modelos generan hasta un 30% más de conversiones que las fotos de productos simples.
+              </li>
+              <li>
+                <strong>Ahorro de costos:</strong> Olvidate de los costos de producción fotográfica tradicional.
+              </li>
+              <li>
+                <strong>Rapidez:</strong> Obtén imágenes profesionales en minutos, no en días.
+              </li>
+              <li>
+                <strong>Consistencia:</strong> Mantén un estilo visual coherente en toda tu tienda.
+              </li>
+            </ul>
+
+            <h3>Casos de uso</h3>
+            <p>
+              Nuestra plataforma es perfecta para:
+            </p>
+            <ul>
+              <li>Tiendas de ropa online</li>
+              <li>Vendedores de moda en marketplaces</li>
+              <li>Diseñadores de moda independientes</li>
+              <li>Marcas emergentes</li>
+            </ul>
+
+            <h3>Conclusión</h3>
+            <p>
+              En el competitivo mundo del comercio electrónico, la calidad de tus imágenes puede marcar la diferencia. Con Tiendia.app, puedes obtener imágenes profesionales con modelos de manera rápida y económica, ayudando a tu tienda a destacar y aumentar sus ventas.
+            </p>
+          </div>
+
+          <!-- Author Info -->
+          <div class="mt-12 flex items-center">
+            <img
+              src="https://placehold.co/100x100/1a1a1a/ffffff?text=Author"
+              alt="Author"
+              class="w-12 h-12 rounded-full"
+            />
+            <div class="ml-4">
+              <h4 class="text-lg font-medium text-gray-900 dark:text-white">
+                Equipo Tiendia
+              </h4>
+              <p class="text-gray-600 dark:text-gray-400">
+                Expertos en fotografía de productos y AI
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+</Layout> 
