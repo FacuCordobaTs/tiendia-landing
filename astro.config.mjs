@@ -8,8 +8,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://tiendia.app',
   vite: {
-    plugins: [tailwindcss()]
-  },
+      plugins: [tailwindcss()]
+	},
   integrations: [react(), sitemap()],
   outDir: './dist',
   build: {
