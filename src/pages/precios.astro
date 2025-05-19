@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import { Badge } from "@/components/ui/badge";
+import { Sparkles } from "lucide-react";
 ---
 
 <Layout title="Precios - Tiendia.app">
@@ -10,63 +12,217 @@ import Header from '../components/Header.astro';
     <div class="max-w-7xl mx-auto">
       <!-- Hero Section -->
       <div class="text-center mb-16">
+        <Badge variant="outline" className="text-sm px-4 py-1 border-primary/50 bg-primary/10 text-primary font-medium shadow-sm mb-4">
+          <Sparkles className="h-3 w-3 mr-2" /> tiendia.app
+        </Badge>
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
           Precios Simples y Transparentes
         </h1>
         <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
-          Solo pagás por lo que usás. Sin suscripciones ni costos ocultos.
+          Elige el pack que mejor se adapte a tus necesidades. Sin suscripciones ni costos ocultos.
         </p>
       </div>
 
-      <!-- Pricing Card -->
-      <div class="max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
-        <div class="px-6 py-8">
-          <div class="text-center">
-            <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
-              Plan Básico
-            </h2>
-            <p class="mt-4 text-gray-600 dark:text-gray-400">
-              Perfecto para tiendas que recién comienzan
-            </p>
-          </div>
+      <!-- Pricing Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <!-- Single Image Pack -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <div class="px-6 py-8">
+            <div class="text-center">
+              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                1 Imagen
+              </h2>
+              <p class="mt-4 text-gray-600 dark:text-gray-400">
+                Ideal para probar el servicio
+              </p>
+            </div>
 
-          <div class="mt-8">
-            <div class="flex items-center justify-center">
-              <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$50</span>
-              <span class="ml-2 text-xl font-medium text-gray-600 dark:text-gray-400">/imagen</span>
+            <div class="mt-8">
+              <div class="flex items-center justify-center">
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$80</span>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en segundos</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://my.tiendia.app/home"
+                class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
+              >
+                Comenzar Ahora
+              </a>
             </div>
           </div>
+        </div>
 
-          <div class="mt-8">
-            <ul class="space-y-4">
-              <li class="flex items-center">
-                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
-              </li>
-              <li class="flex items-center">
-                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en minutos</span>
-              </li>
-              <li class="flex items-center">
-                <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                </svg>
-                <span class="ml-3 text-gray-600 dark:text-gray-400">Soporte prioritario</span>
-              </li>
-            </ul>
+        <!-- 10 Images Pack -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <div class="px-6 py-8">
+            <div class="text-center">
+              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                10 Imágenes
+              </h2>
+              <p class="mt-4 text-gray-600 dark:text-gray-400">
+                Perfecto para pequeños catálogos
+              </p>
+            </div>
+
+            <div class="mt-8">
+              <div class="flex items-center justify-center">
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$800</span>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en segundos</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://my.tiendia.app/home"
+                class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
+              >
+                Comenzar Ahora
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div class="mt-8">
-            <a
-              href="https://my.tiendia.app/home"
-              class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
-            >
-              Comenzar Ahora
-            </a>
+        <!-- 50 Images Pack -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary/90 text-white dark:text-black pt-4 px-4 py-1 rounded-full text-xs font-medium shadow-lg">
+            Más elegido
+          </div>
+          <div class="px-6 py-8">
+            <div class="text-center">
+              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                50 Imágenes
+              </h2>
+              <p class="mt-4 text-gray-600 dark:text-gray-400">
+                Ideal para tiendas medianas
+              </p>
+            </div>
+
+            <div class="mt-8">
+              <div class="flex items-center justify-center">
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$3,500</span>
+              </div>
+              <p class="text-center text-sm text-green-600 dark:text-green-400 mt-2">12.5% de ahorro</p>
+            </div>
+
+            <div class="mt-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en segundos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Soporte prioritario</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://my.tiendia.app/home"
+                class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
+              >
+                Comenzar Ahora
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 100 Images Pack -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <div class="px-6 py-8">
+            <div class="text-center">
+              <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">
+                100 Imágenes
+              </h2>
+              <p class="mt-4 text-gray-600 dark:text-gray-400">
+                Para tiendas con gran catálogo
+              </p>
+            </div>
+
+            <div class="mt-8">
+              <div class="flex items-center justify-center">
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$6,800</span>
+              </div>
+              <p class="text-center text-sm text-green-600 dark:text-green-400 mt-2">15% de ahorro</p>
+            </div>
+
+            <div class="mt-8">
+              <ul class="space-y-4">
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Imágenes profesionales con modelos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Entrega en segundos</span>
+                </li>
+                <li class="flex items-center">
+                  <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="ml-3 text-gray-600 dark:text-gray-400">Soporte prioritario</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="https://my.tiendia.app/home"
+                class="block w-full bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-3 px-4 rounded-lg transition-colors"
+              >
+                Comenzar Ahora
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -82,7 +238,7 @@ import Header from '../components/Header.astro';
               ¿Cómo funciona el pago?
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-400">
-              Podés cargar créditos a tu cuenta usando Mercado Pago. Cada imagen generada cuesta 50 pesos y se descuenta automáticamente de tu saldo.
+              Podés cargar créditos a tu cuenta usando Mercado Pago. Cada imagen generada se descuenta automáticamente de tu saldo según el pack que elijas.
             </p>
           </div>
           <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">

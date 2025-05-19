@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear();
       </Badge>
 
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight md:leading-snug">
-        Transforma tus Fotos <span class="bg-gradient-to-r from-blue-500 to-cyan-400 dark:from-blue-400 dark:to-cyan-300 bg-clip-text text-transparent">en Imagenes Profesionales</span>. ¡10 Gratis, luego $50 por imagen!
+        Transforma tus Fotos <span class="bg-gradient-to-r from-blue-500 to-cyan-400 dark:from-blue-400 dark:to-cyan-300 bg-clip-text text-transparent">en Imagenes Profesionales</span>. ¡10 Gratis, luego desde $68 por imagen!
       </h1>
 
       <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -75,6 +75,63 @@ const currentYear = new Date().getFullYear();
       <p class="text-center text-muted-foreground mt-8 max-w-2xl mx-auto">
         Nuestra IA analiza tu producto y lo presenta en el mejor escenario posible, con iluminación y estilo profesional.
       </p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="container py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Packs de Imágenes
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <!-- Single Image Pack -->
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">1 Imagen</CardTitle>
+            <p class="text-3xl font-bold text-primary mt-2">$80</p>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p class="text-sm text-muted-foreground">Ideal para probar el servicio</p>
+          </CardContent>
+        </Card>
+
+        <!-- 10 Images Pack -->
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">10 Imágenes</CardTitle>
+            <p class="text-3xl font-bold text-primary mt-2">$800</p>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p class="text-sm text-muted-foreground">Perfecto para pequeños catálogos</p>
+          </CardContent>
+        </Card>
+
+        <!-- 50 Images Pack -->
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-primary/90 text-white px-4 py-1 rounded-full text-xs font-medium shadow-lg">
+            Más elegido
+          </div>
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">50 Imágenes</CardTitle>
+            <p class="text-3xl font-bold text-primary mt-2">$3,500</p>
+            <span class="text-sm text-green-600 dark:text-green-400">12.5% de ahorro</span>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p class="text-sm text-muted-foreground">Ideal para tiendas medianas</p>
+          </CardContent>
+        </Card>
+
+        <!-- 100 Images Pack -->
+        <Card className="bg-card/50 hover:border-primary/30 transition-colors duration-300 ease-in-out transform hover:-translate-y-1">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">100 Imágenes</CardTitle>
+            <p class="text-3xl font-bold text-primary mt-2">$6,800</p>
+            <span class="text-sm text-green-600 dark:text-green-400">15% de ahorro</span>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p class="text-sm text-muted-foreground">Para tiendas con gran catálogo</p>
+          </CardContent>
+        </Card>
+      </div>
     </section>
 
     <!-- Features/Benefits Section -->
@@ -164,7 +221,7 @@ const currentYear = new Date().getFullYear();
         ¿Listo para Elevar tus Productos?
       </h2>
       <p class="text-lg md:text-xl text-muted-foreground">
-        Regístrate y obtén 10 imágenes gratis. Luego, solo pagas $50 por imagen.
+        Regístrate y obtén 10 imágenes gratis. Luego, elige el pack que mejor se adapte a tus necesidades.
       </p>
       <a href="https://my.tiendia.app/home">
       <Button 
