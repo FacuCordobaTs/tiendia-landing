@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Globe } from "lucide-react";
 ---
 
 <Layout title="Precios - Tiendia.app">
@@ -22,8 +22,20 @@ import { Sparkles } from "lucide-react";
           Elige el pack que mejor se adapte a tus necesidades. Sin suscripciones ni costos ocultos.
         </p>
         <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
-          🇦🇷 Precios en Pesos Argentinos
+          💰 Precios en Dólares Estadounidenses (USD)
         </p>
+        
+        <!-- Currency Conversion Message -->
+        <div class="bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-lg p-4 max-w-3xl mx-auto mt-6">
+          <div class="flex items-center gap-2 text-green-700 dark:text-green-300 mb-2 justify-center">
+            <Globe className="h-4 w-4" />
+            <span class="font-medium">Conversión Automática de Moneda</span>
+          </div>
+          <p class="text-sm text-green-600 dark:text-green-400 text-center">
+            Los precios se muestran en USD, pero puedes pagar en tu moneda local. 
+            La conversión se realiza automáticamente al momento del pago con la tasa de cambio actual.
+          </p>
+        </div>
       </div>
 
       <!-- Pricing Cards -->
@@ -42,7 +54,7 @@ import { Sparkles } from "lucide-react";
 
             <div class="mt-8">
               <div class="flex items-center justify-center">
-                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$80</span>
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$0.125</span>
               </div>
             </div>
 
@@ -88,7 +100,7 @@ import { Sparkles } from "lucide-react";
 
             <div class="mt-8">
               <div class="flex items-center justify-center">
-                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$800</span>
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$1.25</span>
               </div>
             </div>
 
@@ -137,7 +149,7 @@ import { Sparkles } from "lucide-react";
 
             <div class="mt-8">
               <div class="flex items-center justify-center">
-                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$3,500</span>
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$5.50</span>
               </div>
               <p class="text-center text-sm text-green-600 dark:text-green-400 mt-2">12.5% de ahorro</p>
             </div>
@@ -190,7 +202,7 @@ import { Sparkles } from "lucide-react";
 
             <div class="mt-8">
               <div class="flex items-center justify-center">
-                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$6,800</span>
+                <span class="text-5xl font-extrabold text-gray-900 dark:text-white">$10.63</span>
               </div>
               <p class="text-center text-sm text-green-600 dark:text-green-400 mt-2">15% de ahorro</p>
             </div>
@@ -241,7 +253,7 @@ import { Sparkles } from "lucide-react";
               ¿Cómo funciona el pago?
             </h3>
             <p class="mt-2 text-gray-600 dark:text-gray-400">
-              Podés cargar créditos a tu cuenta usando Mercado Pago. Cada imagen generada se descuenta automáticamente de tu saldo según el pack que elijas.
+              Los precios se muestran en USD, pero puedes pagar en tu moneda local. La conversión se realiza automáticamente al momento del pago. Aceptamos pagos desde cualquier país del mundo.
             </p>
           </div>
           <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
