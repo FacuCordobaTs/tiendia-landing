@@ -1,0 +1,213 @@
+---
+// terminos-y-condiciones.astro - Página de Términos y Condiciones
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { FileText, Calendar, Mail, Shield, AlertTriangle } from "lucide-react";
+
+// Obtener la fecha actual
+const currentDate = new Date().toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<Layout title="Términos y Condiciones | tiendia.app">
+  <Header />
+  <div class="min-h-screen bg-gradient-to-b from-background to-blue-50/50 dark:to-slate-900/50 flex flex-col items-center text-foreground px-4">
+    
+    <!-- Hero Section -->
+    <section class="container pt-20 pb-8 md:pt-28 md:pb-16 text-center space-y-6 max-w-4xl">
+      <Badge variant="outline" className="text-sm px-4 py-1 border-primary/50 bg-primary/10 text-primary font-medium shadow-sm">
+        <FileText className="h-3 w-3 mr-2" /> Términos Legales
+      </Badge>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight md:leading-snug">
+        Términos y <span class="bg-gradient-to-r from-blue-500 to-cyan-400 dark:from-blue-400 dark:to-cyan-300 bg-clip-text text-transparent">Condiciones</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+        Lee atentamente estos términos antes de utilizar nuestros servicios de generación de imágenes con IA.
+      </p>
+
+      <!-- Last Updated Info -->
+      <div class="bg-muted/50 border border-border/50 rounded-lg p-4 max-w-2xl mx-auto">
+        <div class="flex items-center gap-2 text-muted-foreground mb-2">
+          <Calendar className="h-4 w-4" />
+          <span class="font-medium">Última actualización:</span>
+        </div>
+        <p class="text-sm text-muted-foreground">
+          {currentDate}
+        </p>
+      </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="container pb-16 md:py-24">
+      <div class="max-w-4xl mx-auto space-y-8">
+        
+        <!-- Introduction -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <Shield className="h-5 w-5 text-primary" />
+              Bienvenido a tiendia.app
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              Bienvenido a <strong>tiendia.app</strong>, una plataforma que permite a tiendas de ropa generar imágenes profesionales de sus productos usando inteligencia artificial.
+            </p>
+            <p class="text-muted-foreground">
+              Al utilizar nuestro sitio web y servicios, aceptas los siguientes Términos y Condiciones. Si no estás de acuerdo con estos términos, por favor no utilices el sitio.
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Section 1: Service Usage -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-xl">1. Uso del Servicio</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              Puedes usar tiendia.app para subir imágenes de productos de ropa con el fin de generar imágenes estilizadas mediante IA. No está permitido subir imágenes que:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+              <li>Contengan desnudos, violencia, o material ofensivo.</li>
+              <li>Infrinjan derechos de autor o marcas registradas.</li>
+              <li>No te pertenezcan o no tengas permiso de usar.</li>
+            </ul>
+            <p class="text-muted-foreground">
+              Nos reservamos el derecho de eliminar contenido que viole estas reglas.
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Section 2: Intellectual Property -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-xl">2. Propiedad Intelectual</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <ul class="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+              <li>Los derechos de las imágenes subidas pertenecen al usuario que las proporciona.</li>
+              <li>Las imágenes generadas mediante IA pueden usarse comercialmente por el usuario, pero tiendia.app se reserva el derecho de usarlas de manera anónima para fines promocionales o de mejora del servicio.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <!-- Section 3: Payments and Services -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-xl">3. Pagos y Servicios</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              El acceso a ciertas funciones de tiendia.app puede requerir pago. Utilizamos pasarelas de pago seguras para procesar los pagos. No almacenamos información de tarjetas de crédito.
+            </p>
+            <p class="text-muted-foreground">
+              No ofrecemos reembolsos una vez generado el contenido, a menos que exista un error técnico comprobable.
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Section 4: Liability Limitation -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-xl">4. Limitación de Responsabilidad</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              tiendia.app se ofrece "tal cual". No garantizamos que el servicio estará libre de errores o interrupciones. No nos hacemos responsables por pérdidas derivadas del uso del servicio.
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Section 5: Modifications -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="text-xl">5. Modificaciones</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              Podemos actualizar estos términos en cualquier momento. Notificaremos a los usuarios mediante el sitio web cuando se realicen cambios importantes.
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Section 6: Contact -->
+        <Card className="bg-card/50 border-primary/20">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl">
+              <Mail className="h-5 w-5 text-primary" />
+              6. Contacto
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p class="text-muted-foreground">
+              Si tienes preguntas, puedes escribirnos a: 
+              <a href="mailto:facucordoba200@mail.com" class="text-primary hover:underline font-medium">
+                facucordoba200@mail.com
+              </a>
+            </p>
+          </CardContent>
+        </Card>
+
+        <!-- Important Notice -->
+        <Card className="bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-xl text-amber-700 dark:text-amber-300">
+              <AlertTriangle className="h-5 w-5" />
+              Aviso Importante
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-amber-700 dark:text-amber-300">
+              Al continuar usando tiendia.app, confirmas que has leído, comprendido y aceptado estos términos y condiciones en su totalidad.
+            </p>
+          </CardContent>
+        </Card>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container py-16 md:py-24 text-center space-y-6 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        ¿Tienes Preguntas?
+      </h2>
+      <p class="text-lg md:text-xl text-muted-foreground">
+        Si necesitas aclaraciones sobre estos términos, no dudes en contactarnos.
+      </p>
+      <a href="mailto:facucordoba200@mail.com" class="inline-flex items-center gap-2 text-primary hover:underline font-medium">
+        <Mail className="h-5 w-5" />
+        Contactar Soporte
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container py-8 text-center text-sm text-muted-foreground mt-12 border-t border-border/20">
+      © {new Date().getFullYear()} tiendia.app - Imágenes IA para tu Éxito. Todos los derechos reservados.
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  // Client-side script for interactive elements
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add smooth scrolling for anchor links
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script> 
