@@ -100,18 +100,18 @@ const currentDate = '04/07/2025';
             </p>
           </CardContent>
         </Card>
-        <!-- 5. PAGOS Y PASARELA DLOCAL -->
+        <!-- 5. PAGOS Y PASARELA DLOCAL Y MERCADOPAGO -->
         <Card className="bg-card/50 border-primary/20">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-xl">
               <DollarSign className="h-5 w-5 text-primary" />
-              5. Pagos y pasarela DLocal
+              5. Pagos y pasarelas DLocal y MercadoPago
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-2">
             <ul class="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>Los pagos se realizan a través de DLocal, una pasarela de pago segura. tiendia.app no almacena datos de tarjetas ni información financiera del usuario.</li>
-              <li>En caso de errores al realizar el pago (por ejemplo, pagos duplicados, demoras, rechazos, errores técnicos u omisión de pasos requeridos por DLocal), el usuario deberá comunicarse directamente con DLocal, ya que ellos administran y procesan los pagos.</li>
+              <li>Los pagos se realizan a través de DLocal (internacional) o MercadoPago (solo Argentina), ambas pasarelas de pago seguras. tiendia.app no almacena datos de tarjetas ni información financiera del usuario.</li>
+              <li>En caso de errores al realizar el pago (por ejemplo, pagos duplicados, demoras, rechazos, errores técnicos u omisión de pasos requeridos por DLocal o MercadoPago), el usuario deberá comunicarse directamente con la pasarela utilizada, ya que ellas administran y procesan los pagos.</li>
               <li>tiendia.app no se hace responsable por pagos no procesados o mal ejecutados por parte del usuario.</li>
             </ul>
           </CardContent>
@@ -128,7 +128,7 @@ const currentDate = '04/07/2025';
             <ul class="list-disc list-inside space-y-2 text-muted-foreground ml-4">
               <li>No ofrecemos reembolsos si el usuario no está conforme con el resultado generado por la IA.</li>
               <li>Solo se otorgarán reembolsos en caso de error técnico comprobable que impida la entrega del servicio.</li>
-              <li>Los reclamos relacionados con fallas en el pago deberán gestionarse directamente con DLocal.</li>
+              <li>Los reclamos relacionados con fallas en el pago deberán gestionarse directamente con DLocal o MercadoPago, según la pasarela utilizada.</li>
             </ul>
           </CardContent>
         </Card>
